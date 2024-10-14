@@ -956,3 +956,24 @@ h1, h2, h3, h4, h5,
 .slide-one-item.home-slider:hover .owl-nav, .slide-one-item.home-slider:focus .owl-nav, .slide-one-item.home-slider:active .owl-nav {
   opacity: 10;
   visibility: visible; }
+
+.map{
+ overflow: hidden;
+ padding-bottom: 56.25%;
+ position: relative;
+ height: 0;
+}
+
+.map iframe{
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.glass{
+  background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}

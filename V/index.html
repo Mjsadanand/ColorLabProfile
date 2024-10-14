@@ -4,7 +4,7 @@
 * Tempalte URI: https://untree.co/
 * License: https://creativecommons.org/licenses/by/3.0/
 */ -->
-<!doctype html>
+<!doctype html> 
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -33,6 +33,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <title>Veeresh Color Lab &mdash; Haveri</title>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
@@ -64,9 +65,10 @@
           <li><a href="#section-contact" class="nav-link">Contact</a></li>
         </ul>
         <ul class="social js-clone-nav">
-          <li><a href="https://www.instagram.com/_veeresh_colourlab_hvr/"><span class="icon-instagram"></span></a></li>
-          <li><a href="https://www.instagram.com/_veeresh_colourlab_hvr/"><span class="icon-facebook"></span></a></li>
-          <li><a href="https://www.instagram.com/_veeresh_colourlab_hvr/"><span class="icon-twitter"></span></a></li>
+          <li><a href="https://www.instagram.com/_veeresh_colourlab_hvr/" target="_blank"><span class="icon-instagram"></span></a></li>
+          <li><a href="https://www.instagram.com/_veeresh_colourlab_hvr/" target="_blank"><span class="icon-facebook"></span></a></li>
+          <li><a href="https://www.instagram.com/_veeresh_colourlab_hvr/" target="_blank"><span class="icon-twitter"></span></a></li>
+          <li><a href="https://maps.app.goo.gl/9SMwGvthx5amgwU68" target="_blank"><span class="icon-map"></span></a></li>
         </ul>
       </div>
     </header> 
@@ -75,16 +77,14 @@
       <section class="site-section-hero bg-image mb-3" style="background-image: url('images/color.jpg');"  data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-7 text-center">
-            <h1 class=" heading text-uppercase text-white" data-aos="fade-up">Veeresh Colour Lab</h1>
-            <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="100">"Capturing moments, crafting memories—where every pixel tells a story."</p>
+            <h1 class=" heading text-uppercase text-white glass" data-aos="fade-up">Veeresh Colour Lab</h1>
+            <p class="lead text-white mb-4 glass" data-aos="fade-up" data-aos-delay="100" id="element">"Capturing moments, crafting memories—where every pixel tells a story."</p>
             <p data-aos="fade-up" data-aos-delay="100"><a href="#section-contact" class="btn btn-primary btn-md smoothscroll">Contact</a></p>
           </div>
         </div>
       </section>
 
       <div class="container-fluid site-section">
-
-
         <div class="row mb-3">
           <div class="col-12 text-center">
             <h2 class="heading">Photos</h2>
@@ -290,7 +290,7 @@
 
                 <div data-aos="fade-up"  data-aos-delay="100">
                   <h2 class="">Hi I'm M Dayanand</h2>
-                  <p>"I am a passionate photographer who finds joy in capturing the beauty of moments that often go unnoticed. Whether it's a fleeting expression, a breathtaking landscape, or the magic of everyday life, I aim to tell stories through my lens. With a keen eye for detail and a love for creativity, I constantly explore new techniques to improve my craft. Photography isn’t just my profession; it’s my way of connecting with the world and freezing emotions that last a lifetime."</p>
+                  <p>"I am a dedicated photographer who enjoys capturing the beauty of moments that are frequently overlooked. Whether it's a fleeting emotion, a magnificent environment, or the enchantment of everyday life, I want to create stories with my camera. With a sharp eye for detail and a passion of creativity, I am continually looking for new ways to develop my art. Photography is more than just my job; it's a means for me to connect with the world and capture memories that will last a lifetime."</p>
                   <h3 class=" mt-5">Services</h3>
                   
                   <div class="d-block d-md-flex mt-5">
@@ -337,17 +337,11 @@
       
                   <div class="row form-group">
                       <div class="col-md-12">
-                          <label for="email">Email</label>
-                          <input type="email" id="email" class="form-control" required>
+                          <label for="email">Mobile No.</label>
+                          <input type="number" id="number" class="form-control" required>
                       </div>
                   </div>
       
-                  <div class="row form-group">
-                      <div class="col-md-12">
-                          <label for="subject">Subject</label>
-                          <input type="text" id="subject" class="form-control" required>
-                      </div>
-                  </div>
       
                   <div class="row form-group">
                       <div class="col-md-12">
@@ -363,11 +357,10 @@
       
                   const fname = document.getElementById('fname').value;
                   const lname = document.getElementById('lname').value;
-                  const email = document.getElementById('email').value;
-                  const subject = document.getElementById('subject').value;
+                  const email = document.getElementById('number').value;
       
                   const whatsappNumber = '+917829118313'; // Replace with your WhatsApp number (without +)
-                  const message = `Hello, my name is \n ${fname} ${lname}. My email is ${email}\n. Subject: ${subject}`;
+                  const message = `Hello, my name is \n ${fname} ${lname}. My email is ${number}\n.`;
       
                   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
       
@@ -380,12 +373,13 @@
             </div>
           </div>
         </section>
-        <div class="row justify-content-center">
+        <div class="map justify-content-center">
+          <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.951160114436!2d75.39779007457625!3d14.790049772411345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb969d965281f15%3A0xcd80473b16c07ed!2sVeeresh%20Colour%20Lab!5e1!3m2!1sen!2sin!4v1728897277332!5m2!1sen!2sin" width="650" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>   
           <div class="col-md-12 text-center py-1">
             <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="#">M Dayanand</a> 
             </p>
           </div>
-        </div>
       </div>
     </main>
 
@@ -409,7 +403,12 @@
 
   <script src="js/main.js"></script>
   <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
-
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['"Turning moments into memories, one frame at a time."','"Where every photo writes a chapter in life’s book."', '"Memories are made of moments, captured with care."'],
+      typeSpeed: 50,
+    });
+  </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   </body>
 </html>
